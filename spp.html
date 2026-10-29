@@ -1,160 +1,115 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sports Performance Platform — Engineering &amp; Product Case Study</title>
-  <meta name="description" content="A full-stack sports performance system built across React, TypeScript, React Native, Expo, NestJS, Prisma, and MySQL." />
-  <link rel="stylesheet" href="sppstyles.css" />
-</head>
-<body>
-  <header class="spp-header">
-    <div class="container">
-      <a class="back-link" href="/">← Back to SeanPlumridge.com</a>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sports Performance Platform — Sean Plumridge’s Product &amp; Engineering Work</title><meta name="description" content="Sean Plumridge’s work on SPP: connecting coach and athlete workflows, preserving training history, and designing permissions and shared systems. In development."><link rel="canonical" href="https://seanplumridge.com/spp.html">
+<meta name="theme-color" content="#F5F6F8"><meta property="og:type" content="website"><meta property="og:site_name" content="Sean Plumridge"><meta property="og:title" content="Sports Performance Platform — Sean Plumridge’s Product &amp; Engineering Work"><meta property="og:description" content="Sean Plumridge’s work on SPP: connecting coach and athlete workflows, preserving training history, and designing permissions and shared systems. In development."><meta property="og:url" content="https://seanplumridge.com/spp.html"><meta property="og:image" content="https://seanplumridge.com/assets/social/spp.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Sean Plumridge — Sports Performance Platform product and engineering case study"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sports Performance Platform — Sean Plumridge’s Product &amp; Engineering Work"><meta name="twitter:description" content="Sean Plumridge’s work on SPP: connecting coach and athlete workflows, preserving training history, and designing permissions and shared systems. In development."><meta name="twitter:image" content="https://seanplumridge.com/assets/social/spp.png"><meta name="twitter:image:alt" content="Sean Plumridge — Sports Performance Platform product and engineering case study">
+<link rel="icon" href="Images/SeanPFavicons.png" type="image/png"><link rel="preload" href="assets/fonts/InstrumentSans-Variable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="sppstyles.css">
+</head><body class="case-page spp-case"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header wrap"><a class="identity" href="Index.html" aria-label="Sean Plumridge, home">Sean Plumridge<span class="identity-dot" aria-hidden="true"></span></a><nav aria-label="Primary"><a href="Index.html#spp">Work</a><a href="Index.html#perspective">Perspective</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav></header><main id="main" tabindex="-1">
+<section class="case-hero wrap" aria-labelledby="case-title">
+  <p class="eyebrow">The defining project · Sports Performance Platform</p>
+  <h1 id="case-title">The decisions behind<br> Sports Performance Platform.</h1>
+  <p class="case-deck">I’m building software that connects coach planning and review with an athlete’s training, readiness, and development. The work is as much about the meaning of the information as the interface that presents it.</p>
+  <dl class="case-meta">
+    <div><dt>My role</dt><dd>Founder &amp; developer</dd></div>
+    <div><dt>Scope</dt><dd>Product · web · mobile · APIs · data</dd></div>
+    <div><dt>Status</dt><dd>In development</dd></div>
+  </dl>
+  <div class="case-actions"><a class="button" href="#workflow">Explore the work <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/SeanPlumridge/spp-engineering-case-study/blob/04382a9a40f10563ac59c5c7e556feb4480f0ad2/README.md">Read the engineering account <span aria-hidden="true">↗</span></a></div>
+</section>
+
+<nav class="case-nav wrap" aria-label="Case study sections">
+  <a href="#workflow">The workflow</a><a href="#training-history">Training history</a><a href="#permissions">Permissions</a><a href="#shared-systems">Shared systems</a><a href="#evidence">Evidence &amp; status</a>
+</nav>
+
+<section class="case-section" aria-labelledby="problem-title">
+  <div class="wrap case-grid">
+    <div class="case-heading"><p class="eyebrow">The problem &amp; my responsibility</p><h2 id="problem-title">Connect the work.<br> Keep the context.</h2></div>
+    <div class="prose">
+      <p>Coaches need to plan, understand athlete context, and review what happened. Athletes need to know what is assigned, carry it out, and see their progress. SPP’s product goal is to connect those responsibilities through a shared view of training and development.</p>
+      <p>My work spans product direction, the Coach Portal, the Player experience, backend APIs, data modelling, and permissions. I’m responsible for connecting those parts to the workflows they serve.</p>
+      <p>The platform is in development. Public access and launch timing have not been announced. This case study focuses on selected decisions and published previews.</p>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="spp-hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Featured platform</p>
-          <h1>Sports Performance Platform</h1>
-          <p class="hero-statement">A connected performance system for coaches, athletes, teams, and organizations.</p>
-          <p class="hero-lead">SPP brings athlete development, training delivery, readiness, performance data, communication, and coaching workflows into one connected product system.</p>
-          <p class="role-line"><strong>Full-Stack Developer &amp; Founder</strong><span>Web · mobile · backend · data · product architecture</span></p>
-        </div>
-        <div class="hero-media" aria-label="Sports Performance Platform Player Portal visual">
-          <img src="Images/SPP_Portfolio.png" alt="Sports Performance Platform Player Portal visual featuring athlete development and a runner" width="1904" height="896" />
-        </div>
-      </div>
-    </section>
+<section class="case-section soft" id="workflow" aria-labelledby="workflow-title">
+  <div class="wrap">
+    <div class="case-grid">
+      <div class="case-heading"><p class="eyebrow">The workflow</p><h2 id="workflow-title">From team context<br> to planned work.</h2></div>
+      <div class="prose"><p>The overview brings readiness, availability, and recent changes into a coaching view. Assignments brings planned training, schedules, and completion status into focus. Together, these screens show how the Coach Portal presents context alongside the work that needs attention.</p><p>The Player experience addresses the athlete’s side: assigned training, session execution, readiness, and progress. Both images below are Coach Portal views.</p></div>
+    </div>
+    <div class="workflow-grid">
+      <figure class="case-figure">
+        <img src="assets/spp/spp-performance-overview-desktop.webp" srcset="assets/responsive/spp-performance-overview-desktop-960.webp 960w, assets/spp/spp-performance-overview-desktop.webp 1482w" sizes="(max-width: 620px) calc(100vw - 44px), (max-width: 1160px) 50vw, 680px" width="1482" height="821" alt="Coach Portal Performance Overview showing team counts, readiness distribution, and recent fictional athlete changes." loading="lazy" decoding="async">
+        <figcaption><strong>01 · Performance Overview</strong><span>Team context and recent changes. Coach Portal development preview · Fictional demonstration data.</span><a href="assets/spp/spp-performance-overview-desktop.webp" target="_blank" rel="noopener">Inspect the full overview <span class="sr-only">in a new tab</span> <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
+      <figure class="case-figure">
+        <img src="assets/spp/spp-assignments-desktop.webp" srcset="assets/responsive/spp-assignments-desktop-960.webp 960w, assets/spp/spp-assignments-desktop.webp 1483w" sizes="(max-width: 620px) calc(100vw - 44px), (max-width: 1160px) 50vw, 680px" width="1483" height="813" alt="Coach Portal Assignments showing fictional training assignments, schedules, completion status, and a selected assignment’s details." loading="lazy" decoding="async">
+        <figcaption><strong>02 · Training Assignments</strong><span>Planned work and follow-through. Coach Portal development preview · Fictional demonstration data.</span><a href="assets/spp/spp-assignments-desktop.webp" target="_blank" rel="noopener">Inspect the full assignments view <span class="sr-only">in a new tab</span> <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-    <section class="section thesis-section">
-      <div class="container thesis-inner">
-        <p class="eyebrow">Product thesis</p>
-        <h2>Performance data is only useful when it changes the next decision.</h2>
-        <p>SPP turns fragmented athlete information into clear operational context for coaches and useful daily guidance for athletes—connecting the information that matters without burying people in dashboards.</p>
+<section class="case-section decision-chapter" id="training-history" aria-labelledby="history-title">
+  <div class="wrap case-grid">
+    <div class="case-heading"><p class="eyebrow">Decision 01 · Training history</p><h2 id="history-title">A training plan can change. An athlete’s history shouldn’t.</h2></div>
+    <div class="prose">
+      <p>A coach needs to revise future programming without changing the record of an athlete’s completed session. If the plan and the result lose their distinct meanings, reviewing past work becomes less reliable.</p>
+      <h3>The choice: separate prescription from performance.</h3>
+      <p>SPP stores prescribed exercise data separately from performed results. The public engineering account describes completed results as historical records that remain separate from later programming changes.</p>
+      <div class="decision-pair" aria-label="The distinction between prescribed training and performed results">
+        <div class="decision-lane"><p class="eyebrow">Prescribed</p><h3>What was planned</h3><p>Future programming can be revised.</p></div>
+        <div class="decision-lane"><p class="eyebrow">Performed</p><h3>What happened</h3><p>Completed results retain their historical meaning.</p></div>
       </div>
-    </section>
+      <p>The reason is practical: a change to what comes next should not silently redefine what already happened. This distinction makes the responsibility of each record explicit and gives the product a clear rule for preserving training history.</p>
+      <p>This is a documented implementation decision. The published account does not include an executable test or a before-and-after record that independently verifies the behaviour. The comparison above explains the model; it is not a test result.</p>
+      <p><a href="https://github.com/SeanPlumridge/spp-engineering-case-study/blob/04382a9a40f10563ac59c5c7e556feb4480f0ad2/README.md#L93-L105">Read the training-history explanation <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </div>
+</section>
 
-    <section class="section section-dark">
-      <div class="container split-grid">
-        <div class="section-copy">
-          <p class="eyebrow">One platform. Two experiences.</p>
-          <h2>Coordinated surfaces for the people doing the work.</h2>
-          <div class="surface-list">
-            <div><h3>Coach</h3><p>Operational control across programming, teams, readiness, athlete development, performance intelligence, and communication.</p></div>
-            <div><h3>Player</h3><p>A smartphone-first workspace for training execution, readiness, progress, objectives, testing, and coach communication.</p></div>
-          </div>
-        </div>
-        <figure class="product-frame command-frame">
-          <img src="Images/SPP_Command_Centre.png" alt="Sports Performance Platform coach Command Center showing roster, availability, readiness, attention signals, and training" width="1818" height="865" loading="lazy" />
-        </figure>
-      </div>
-    </section>
+<section class="case-section soft decision-chapter" id="permissions" aria-labelledby="permissions-title">
+  <div class="wrap case-grid">
+    <div class="case-heading"><p class="eyebrow">Decision 02 · Organisation &amp; permissions</p><h2 id="permissions-title">The right context starts with the right access.</h2></div>
+    <div class="prose">
+      <p>SPP supports organisations containing teams, coaches, and athletes. An athlete completing assigned work, a coach managing a team, and organisation staff each need a different scope of access.</p>
+      <h3>The choice: enforce authority behind the interface.</h3>
+      <p>The public engineering account places authorization in the backend, with explicit organisation and role context. It also distinguishes organisation-level responsibilities from staff working within assigned teams.</p>
+      <p>The reason is straightforward: access should not depend only on what a screen displays or hides. The practical consequence is that permissions belong in API authorization, data queries, and application workflows as well as the interface.</p>
+      <p>The public material describes that enforcement; it does not publish cross-organisation or role-scope test results. These descriptions are not a security certification.</p>
+      <p><a href="https://github.com/SeanPlumridge/spp-engineering-case-study/blob/04382a9a40f10563ac59c5c7e556feb4480f0ad2/README.md#L64-L91">Read about organisation and role boundaries <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </div>
+</section>
 
-    <section class="section coach-evidence">
-      <div class="container split-grid split-grid-reverse">
-        <figure class="product-frame coach-frame">
-          <img src="Images/Coach_Portal_Calendar.png" alt="Coach Portal calendar showing training, testing, rest days, and team planning" loading="lazy" />
-        </figure>
-        <div class="section-copy">
-          <p class="eyebrow">Coach operations</p>
-          <h2>Operational control without losing athlete context.</h2>
-          <p>Coaches can move from organization state to teams, athletes, training, readiness, attention signals, and scheduling without treating each athlete as an isolated profile.</p>
-          <p>Planning and review stay grounded in the current operational timeline and the people it affects.</p>
-        </div>
+<section class="case-section decision-chapter" id="shared-systems" aria-labelledby="shared-title">
+  <div class="wrap case-grid">
+    <div class="case-heading"><p class="eyebrow">Decision 03 · Shared systems</p><h2 id="shared-title">Shared meaning.<br> Different ways of working.</h2></div>
+    <div class="prose">
+      <p>Coaches need space to plan, review, and coordinate across athletes. Athletes need a focused mobile experience for readiness, assigned training, session execution, and progress.</p>
+      <h3>The choice: share the domain, adapt the experience.</h3>
+      <p>The Coach Portal and Player Portal use a shared backend and domain model, with interaction patterns designed for their role, context, and device. The common foundation connects the concepts; each interface follows the task.</p>
+      <div class="decision-pair">
+        <div class="decision-lane"><p class="eyebrow">Coach Portal</p><h3>Planning &amp; review</h3><p>React and TypeScript for desktop and tablet workflows.</p></div>
+        <div class="decision-lane"><p class="eyebrow">Player experience</p><h3>Daily execution</h3><p>React Native and Expo for athlete workflows on mobile.</p></div>
       </div>
-    </section>
+      <p>Shared NestJS APIs and Prisma/MySQL data models provide the underlying system. This lets the product use consistent concepts without requiring coaches and athletes to work through an identical interface.</p>
+      <p>The architecture and intended workflows are documented. The published Coach previews do not independently demonstrate native-device behaviour or a complete coach-to-athlete sequence.</p>
+      <p><a href="https://github.com/SeanPlumridge/spp-engineering-case-study/blob/04382a9a40f10563ac59c5c7e556feb4480f0ad2/README.md#L42-L58">Inspect the shared architecture <span aria-hidden="true">↗</span></a> · <a href="https://github.com/SeanPlumridge/spp-engineering-case-study/blob/04382a9a40f10563ac59c5c7e556feb4480f0ad2/README.md#L107-L128">Read the workflow distinction <span aria-hidden="true">↗</span></a></p>
+    </div>
+  </div>
+</section>
 
-    <section class="section section-soft coach-evidence">
-      <div class="container split-grid">
-        <div class="section-copy">
-          <p class="eyebrow">Athlete &amp; roster intelligence</p>
-          <h2>Every athlete in context.</h2>
-          <p>Roster views make current training state, assignment coverage, completion history, availability, workload, and athlete-level actions visible alongside team and organization context.</p>
-          <p>That gives coaches a practical way to recognize where attention is needed without losing sight of the wider program.</p>
-        </div>
-        <figure class="product-frame coach-frame">
-          <img src="Images/Coach_Portal_Roster.png" alt="Coach Portal roster with athlete training state, assignment coverage, and coach actions" loading="lazy" />
-        </figure>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container intelligence-layout">
-        <div class="section-copy">
-          <p class="eyebrow">Performance intelligence</p>
-          <h2>From performance data to decisions.</h2>
-          <p>Configurable reporting brings readiness patterns, program progression, testing, benchmarking, and longitudinal review into a useful coaching context.</p>
-          <p>SPP is designed to surface evidence that supports review and action—not merely store data.</p>
-        </div>
-        <figure class="product-frame reports-frame">
-          <img src="Images/Coach_Portal_Reports.png" alt="Coach Portal reports for readiness, program progression, testing, and athlete benchmarking" loading="lazy" />
-        </figure>
-      </div>
-    </section>
-
-    <section class="section athlete-section">
-      <div class="container athlete-grid">
-        <div class="section-copy">
-          <p class="eyebrow">Athlete experience</p>
-          <h2>Built around how athletes actually use software.</h2>
-          <p>The Player experience puts today’s training, development focus, program progression, readiness, testing, and coach communication into a focused smartphone-first workspace.</p>
-          <p>Training and communication sit together, so athletes can act on direction without moving between disconnected tools.</p>
-        </div>
-        <div class="mobile-screens" aria-label="Sports Performance Platform athlete mobile screens">
-          <figure class="mobile-frame"><img src="Images/Player_Portal_Mobile_Training.png" alt="Player Portal mobile training screen showing current program, progress, testing, and readiness" loading="lazy" /></figure>
-          <figure class="mobile-frame"><img src="Images/Player_Portal_Mobile_Message.png" alt="Player Portal mobile messaging screen for coach and athlete communication" loading="lazy" /></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <header class="section-intro">
-          <p class="eyebrow">Product architecture</p>
-          <h2>Architecture &amp; engineering.</h2>
-          <p>SPP is a multi-tenant software system spanning a React / TypeScript Coach Portal, a React Native / Expo Player experience, and shared NestJS APIs with Prisma / MySQL data models.</p>
-        </header>
-        <div class="architecture-grid">
-          <article><h3>Coach Portal</h3><p>React · TypeScript · Vite · responsive application workflows</p></article>
-          <article><h3>Player experience</h3><p>React Native · Expo · smartphone-first athlete workflows</p></article>
-          <article><h3>Backend &amp; data</h3><p>NestJS · REST APIs · Prisma · MySQL · relational data modelling</p></article>
-          <article><h3>Application architecture</h3><p>Multi-tenant boundaries, permissions, modular architecture, Git-based development, testing, debugging, performance, and accessibility.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section leadership-section">
-      <div class="container leadership-inner">
-        <div>
-          <p class="eyebrow">Product leadership</p>
-          <h2>Built from product thesis to implementation.</h2>
-        </div>
-        <div>
-          <p class="role-title">Full-Stack Developer &amp; Founder</p>
-          <p>My work spans product strategy, roadmap, information architecture, UX/UI direction, system architecture, full-stack implementation, testing, product iteration, platform positioning, and partnership groundwork.</p>
-          <div class="leadership-capabilities" aria-label="Product leadership capabilities">
-            <span><strong>Product</strong>Thesis, roadmap, positioning</span>
-            <span><strong>Experience</strong>Information architecture, UX/UI</span>
-            <span><strong>Engineering</strong>Systems, implementation, quality</span>
-            <span><strong>Scale</strong>Iteration, partnerships, go-to-market groundwork</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing-section">
-      <div class="container">
-        <p>SPP is designed around a simple principle: performance systems should reduce uncertainty, connect people to the right context, and make the next decision clearer.</p>
-        <div class="closing-actions">
-          <a class="closing-link" href="/">← Back to portfolio</a>
-          <a class="closing-link" href="https://github.com/SeanPlumridge/spp-engineering-case-study" target="_blank" rel="noopener">View Engineering Case Study →</a>
-        </div>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+<section class="case-section dark" id="evidence" aria-labelledby="evidence-title">
+  <div class="wrap">
+    <div class="case-heading"><p class="eyebrow">Evidence &amp; current status</p><h2 id="evidence-title">What this work establishes.</h2></div>
+    <div class="evidence-grid">
+      <article><h3>Publicly documented</h3><p>The engineering account describes the architecture, permission boundaries, training-history model, and development practices. The implementation descriptions are author-reported; the application source remains private.</p></article>
+      <article><h3>Published and checked</h3><p>The two Coach screenshots are authentic published development previews. Their downloaded files were verified against the pinned public repository. That establishes image provenance, not application behaviour.</p></article>
+      <article><h3>Still to validate independently</h3><p>The public material does not provide executable application tests, a verified end-to-end workflow, or measured user and business outcomes. Screenshots and descriptions alone do not establish those results.</p></article>
+    </div>
+    <div class="prose"><p>SPP remains in development. These screens use fictional demonstration data, and pictured features may change before release. Public access and launch timing have not been announced.</p></div>
+    <div class="case-actions"><a class="button" href="https://sportsperformanceplatform.com/#connected-performance">View SPP’s product preview <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/SeanPlumridge/spp-engineering-case-study/blob/04382a9a40f10563ac59c5c7e556feb4480f0ad2/README.md">Read the engineering account <span aria-hidden="true">↗</span></a><a class="text-link" href="#contact">Talk with me about this work <span aria-hidden="true">↓</span></a></div>
+  </div>
+</section><section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact"><div><p class="eyebrow">Let’s start a conversation</p><h2 id="contact-title">Have a project or<br> opportunity in mind?</h2><p class="contact-support">Get in touch about a role, a product, or Sports Performance Platform.</p></div><a class="contact-link" href="mailto:spplumridge@gmail.com">Email me <span aria-hidden="true">↗</span><small>spplumridge@gmail.com</small></a></div></section></main><footer class="site-footer wrap"><a href="Index.html">Sean Plumridge © 2026</a><div><a href="https://www.linkedin.com/in/seanplumridge/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/SeanPlumridge">GitHub <span aria-hidden="true">↗</span></a><a href="Index.html#spp">Back to selected work ↑</a></div></footer></body></html>

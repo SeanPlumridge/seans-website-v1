@@ -1,0 +1,16 @@
+# Existing Git-connected project: seanswebsite, production branch main.
+# Package only approved visitor files; review evidence and repository tooling stay private to the checkout.
+[build]
+  command = "node tools/package-site.cjs"
+  publish = "dist"
+
+# Keep legacy capital-I home links while publishing a reliable lowercase root document.
+[[redirects]]
+  from = "/Index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/Index"
+  to = "/"
+  status = 301
