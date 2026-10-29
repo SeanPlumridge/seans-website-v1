@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const files = [
   'Index.html', 'spp.html', 'finforfam.html', 'one-more-run.html',
+  'robots.txt', 'sitemap.xml',
   'styles.css', 'homepage.css', 'sppstyles.css', 'fffstyles.css',
   'Images/SeanPFavicons.png', 'Images/OneMoreRun_Hero2.webp',
   'assets/fonts/InstrumentSans-Variable.woff2', 'assets/fonts/instrumentsans-OFL.txt',
