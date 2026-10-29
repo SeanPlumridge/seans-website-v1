@@ -35,7 +35,14 @@ function build() {
   const expected = new Set(files.map(outputName));
   if (fs.existsSync(output)) {
     const extras = walk(output).map(file => path.relative(output, file).split(path.sep).join('/')).filter(file => !expected.has(file));
-    if (extras.length) throw new Error('Unexpected publish files; inspect before proceeding: ' + extras.join(', '));
+    // Netlify can retain its own copy of this configuration in the cached
+    // publish directory. Remove only that exact, verified build artifact.
+    const cachedConfig = path.join(output, 'netlify.toml');
+    const knownNetlifyArtifact = process.env.NETLIFY === 'true' &&
+      extras.length === 1 && extras[0] === 'netlify.toml' &&
+      fs.readFileSync(cachedConfig).equals(fs.readFileSync(path.join(root, 'netlify.toml')));
+    if (extras.length && !knownNetlifyArtifact) throw new Error('Unexpected publish files; inspect before proceeding: ' + extras.join(', '));
+    if (knownNetlifyArtifact) fs.unlinkSync(cachedConfig);
   }
   for (const file of files) {
     const source = path.join(root, file), destination = path.join(output, outputName(file));
